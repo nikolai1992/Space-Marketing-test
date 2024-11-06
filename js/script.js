@@ -1,14 +1,13 @@
 $(function() {
-    console.log(moment())
-    console.log(moment().subtract(30, 'days'))
     $('input[name="daterange"]').daterangepicker({
         maxSpan: {
             "days": 60
         },
+        startDate: moment().subtract(30, 'days'), // 30 days before today
+        endDate: moment(),
         maxDate: moment(), // Sets maxDate to today's date
         opens: 'left'
     }, function(start, end, label) {
-        console.log($('input[name="daterange"]').val());
         $.ajax({
             type: 'get',
             url: 'index.php',
