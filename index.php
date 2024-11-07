@@ -10,8 +10,8 @@
         $daterange = $_GET['daterange'];
         $period = explode('-', $daterange);
         if (count($period) == 2) {
-            $dateFrom = (new DateTime($period[0]))->format('Y-m-d') . '00:00:00';
-            $dateTo = (new DateTime($period[1]))->format('Y-m-d') . '23:59:59';
+            $dateFrom = (new DateTime($period[0]))->format('Y-m-d') . ' 00:00:00';
+            $dateTo = (new DateTime($period[1]))->format('Y-m-d') . ' 23:59:59';
         }
     }
     $userStatuses = $spaceMarketing->getUsersStatuses(

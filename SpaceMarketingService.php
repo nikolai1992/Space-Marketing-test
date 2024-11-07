@@ -3,14 +3,13 @@
 class SpaceMarketingService
 {
 	private string $token = 'ba67df6a-a17c-476f-8e95-bcdb75ed3958';
-	public function getUsersStatuses($dateFrom = null, $dateTo = null, $page = 0, $limit = 10)
+	public function getUsersStatuses($dateFrom = null, $dateTo = null, $page = 0, $limit = 100)
 	{
 		$request = [
 			'date_from' => $dateFrom, // default -30days, max -60days
 	       'date_to' => $dateTo,   // default now
 	       'page' => $page,                          // default 0
 	       'limit' => $limit
-
 		];
 
 		$curlOptions = [
